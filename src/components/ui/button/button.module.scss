@@ -1,0 +1,21 @@
+@mixin big-btn($color) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: rgb($color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.big-btn-pink {
+  @include big-btn(var(--color-primary-pink));
+}
+
+.big-btn-disable {
+  @include big-btn(var(--color-pale-gray));
+  cursor: default;
+}
