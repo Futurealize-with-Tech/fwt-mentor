@@ -1,7 +1,27 @@
 :root {
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  --font-mono: 'M PLUS Rounded 1c', ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+  --color-primary-pink: 249, 193, 207;
+  --color-primary-purple: 213, 149, 238;
+  --color-primary-gray: 128, 128, 138;
+  --color-primary-red: 255, 105, 97;
+  --color-primary-blue: 65, 105, 225;
+  --color-primary-orange: 255, 165, 79;
+  --color-pale-gray: 183, 183, 182;
+
+  --color-yellow: 255, 204, 51;
+  --color-red: 255, 102, 102;
+
+  --color-white: 255, 255, 255;
+  --color-black: 0, 0, 0;
+
+  --text-color: 64, 64, 72;
+
+  --gradient-main: linear-gradient(135deg, rgba(var(--color-primary-pink), 1) 0%, rgba(var(--color-primary-purple), 1) 100%);
+
+  --drop-shadow: 0 2px 4px rgba(var(--text-color), 0.1), 0 4px 8px rgba(var(--text-color), 0.1);
 }
 
 * {
@@ -13,13 +33,20 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
+  min-height: 100vh;
+  color: rgb(var(--text-color));
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+input {
+  font-size: 16px;
+  outline: none;
+  border: none;
 }

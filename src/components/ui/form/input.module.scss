@@ -1,0 +1,51 @@
+//select mentor
+.select-input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0.7rem 0.5rem;
+  border: 2px solid rgb(var(--color-pale-gray));
+  border-radius: 0.5rem;
+  &:focus-within {
+    border-color: rgb(var(--color-primary-purple));
+  }
+}
+
+.select-input {
+  width: 100%;
+}
+
+.select-mentor-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.select-mentor-icon {
+  width: 2rem;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.select-mentor-delete-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  font-size: 1.2rem;
+  color: rgb(var(--color-primary-purple));
+  cursor: pointer;
+}
