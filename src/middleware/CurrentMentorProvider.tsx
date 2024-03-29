@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { MentorType } from "@/types/mentorType";
 import { mentorKey } from "@/lib/key/key";
 import { MentorsDataContext } from "./MentorsDataProvider";
+import { usePathname } from "next/navigation";
 
 export const CurrentMentorContext = createContext<MentorType | null>(null);
 
@@ -14,6 +15,7 @@ export default function CurrentMentorProvider({
 }) {
   const [currentMentor, setCurrentMentor] = useState<MentorType | null>(null);
   const mentors = useContext(MentorsDataContext);
+  const pathname = usePathname();
 
   useEffect(() => {
     const mentorIdData = localStorage.getItem(mentorKey);
@@ -25,7 +27,7 @@ export default function CurrentMentorProvider({
         setCurrentMentor(mentor);
       }
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <CurrentMentorContext.Provider value={currentMentor}>

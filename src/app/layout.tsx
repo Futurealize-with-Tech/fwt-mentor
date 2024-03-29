@@ -4,6 +4,8 @@ import './globals.scss'
 import MentorsDataProvider from '@/middleware/MentorsDataProvider'
 import { MentorType } from '@/types/mentorType'
 import CurrentMentorProvider from '@/middleware/CurrentMentorProvider'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,6 +36,19 @@ export default async function RootLayout({
             {children}
           </CurrentMentorProvider>
         </MentorsDataProvider>
+        <ToastContainer
+            position="bottom-center"
+            autoClose={4000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="colored"
+            className='toast'
+        />
       </body>
     </html>
   )

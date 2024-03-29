@@ -22,6 +22,8 @@
   --gradient-main: linear-gradient(135deg, rgba(var(--color-primary-pink), 1) 0%, rgba(var(--color-primary-purple), 1) 100%);
 
   --drop-shadow: 0 2px 4px rgba(var(--text-color), 0.1), 0 4px 8px rgba(var(--text-color), 0.1);
+
+  --screen-width: 800px;
 }
 
 * {
@@ -38,6 +40,7 @@ body {
 body {
   min-height: 100vh;
   color: rgb(var(--text-color));
+  background-image: var(--gradient-main);
 }
 
 a {
