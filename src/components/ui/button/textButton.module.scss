@@ -1,0 +1,9 @@
+.text-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(var(--color-primary-purple));
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
