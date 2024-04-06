@@ -20,3 +20,39 @@
     background-color: rgba(var(--color-primary-pink), 0.3);
   }
 }
+
+.save-menu {
+  position: absolute;
+  top: 1.8rem;
+  right: 0rem;
+  z-index: 101;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  background-color: rgb(var(--color-white));
+  box-shadow: var(--drop-shadow);
+  border-radius: 0.3rem;
+}
+
+.save-menu-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.2rem;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.save-menu-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}

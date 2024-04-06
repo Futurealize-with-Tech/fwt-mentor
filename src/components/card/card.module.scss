@@ -1,0 +1,30 @@
+.save-menu-tab {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(var(--color-pale-gray), 0.3);
+  }
+}
+
+.save-tab-icon-box {
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-tab-icon {
+  width: auto;
+  height: 1.5rem;
+  border-radius: 0.3rem;
+}
+
+.save-tab-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+}

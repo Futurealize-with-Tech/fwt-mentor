@@ -43,9 +43,11 @@ export default function MentorDetail() {
     <div className={styles['detail-container']}>
       <MentorBox mentor={currentMentor} />
       {(messages && !loading && !error) && (
-        messages.map((message) => (
-          <MessageIndexBox message={message} key={message.id} />
-        ))
+        <div className={styles['message-index-container']}>
+          {messages.map((message) => (
+            <MessageIndexBox message={message} key={message.id} />
+          ))}
+        </div>
       )}
       {loading && (
         <div className={styles['loading-container']}>
