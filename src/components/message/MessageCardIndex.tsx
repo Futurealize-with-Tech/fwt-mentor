@@ -21,9 +21,9 @@ export default function MessageCardIndex() {
   const animateImage = {
     enter: (direction: number) => {
       return {
-        y: direction > 0 ? 300 : -300,
+        display: 'none',
+        y: direction > 0 ? 100 : -100,
         opacity: 0,
-        display: 'none'
       };
     },
     center: {
@@ -33,9 +33,9 @@ export default function MessageCardIndex() {
     },
     exit: (direction: number) => {
       return {
-        y: direction < 0 ? 300 : -300,
+        display: 'none',
+        y: direction < 0 ? 100 : -100,
         opacity: 0,
-        display: 'none'
       };
     },
   };
