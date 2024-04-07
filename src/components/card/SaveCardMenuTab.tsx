@@ -14,7 +14,7 @@ export default function SaveCardMenuTab({
   handleClick: () => void,
 }) {
   return (
-    <li className={styles['save-menu-tab']}>
+    <li className={styles['save-menu-tab']} onClick={handleClick}>
       <div className={styles['save-tab-icon-box']}>
         <Image src={image} alt='tab-icon' width={100} className={styles['save-tab-icon']} />
       </div>

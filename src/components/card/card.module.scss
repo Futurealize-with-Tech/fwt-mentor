@@ -28,3 +28,113 @@
   font-size: 0.9rem;
   font-weight: 600;
 }
+
+//card
+
+@mixin card-area() {
+  width: 80%;
+  min-height: 12%;
+  background-color: rgba(var(--color-white), 0.8);
+  border-radius: 0.2rem;
+  position: relative;
+}
+
+.card-container {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 24/17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-bg-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 24/17;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 0.5rem;
+  box-shadow: var(--drop-shadow);
+}
+
+.card-front-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+}
+
+.card-title-img {
+  width: 60%;
+  height: auto;
+}
+
+.card-mentor-area {
+  @include card-area();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.card-mentor-area-decorate {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card-message-area {
+  @include card-area();
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  overflow-y: auto;
+  padding: 2%;
+}
+
+.card-message-area-body {
+  font-size: 0.8rem;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.card-message-area-title-img {
+  width: auto;
+  height: 1.5rem;
+}
+
+.card-member-area {
+  @include card-area();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card-member-area-title-img {
+  width: auto;
+  height: 1.5rem;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
