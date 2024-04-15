@@ -24,7 +24,7 @@ export default function MessageIndexBox({ message } : { message: MessageType }) 
           >
             <Icon />
           </div>
-          <SaveCardButton id={message.id} />
+          <SaveCardButton message={message} />
         </div>
         <p className={styles['box-name']}>{message.memberName}</p>
         <p className={styles['box-body-container']}>

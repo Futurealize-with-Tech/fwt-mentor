@@ -6,14 +6,20 @@ import cardDesign from '@/public/card/card-design.jpg';
 import textDesign from '@/public/card/text-design.jpg';
 import styles from './menu.module.scss';
 import { toast } from 'react-toastify';
+import { returnTextCardImage } from '@/lib/functions/returnTextCardImage';
+import { useContext } from 'react';
+import { CurrentMentorContext } from '@/middleware/CurrentMentorProvider';
+import { MessageType } from '@/types/messageType';
+import { saveMessage } from '@/lib/functions/saveMessage';
 
 export default function SaveCardMenu({
-  id,
+  message,
   onClose,
 } : {
-  id: number,
+  message: MessageType,
   onClose: () => void,
 }) {
+  const mentor = useContext(CurrentMentorContext);
 
   const handleClick = () => {
     toast.warn('まだダウンロード機能できてません！すみません！！いのれん');
@@ -26,8 +32,14 @@ export default function SaveCardMenu({
           <MdOutlineFileDownload />
           メッセージを保存
         </div>
-        <SaveCardMenuTab image={cardDesign} text='カードデザイン' handleClick={handleClick} />
-        <SaveCardMenuTab image={textDesign} text='テキストデザイン' handleClick={handleClick} />
+        <SaveCardMenuTab
+          image={cardDesign}
+          type='card'
+        />
+        <SaveCardMenuTab
+          image={textDesign}
+          type='text'
+        />
       </ul>
       <div className={styles['save-menu-bg']} />
     </>
