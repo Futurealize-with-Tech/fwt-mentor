@@ -22,7 +22,7 @@ export default function MessageCardIndex() {
     enter: (direction: number) => {
       return {
         display: 'none',
-        y: direction > 0 ? 100 : -100,
+        y: direction > 0 ? 300 : -300,
         opacity: 0,
       };
     },
@@ -34,7 +34,7 @@ export default function MessageCardIndex() {
     exit: (direction: number) => {
       return {
         display: 'none',
-        y: direction < 0 ? 100 : -100,
+        y: direction < 0 ? 300 : -300,
         opacity: 0,
       };
     },
@@ -75,6 +75,7 @@ export default function MessageCardIndex() {
               initial="enter"
               animate="center"
               exit="exit"
+              transition={{ duration: 0.3 }}
             >
               <IndexCard message={messages[design]} />
             </motion.div>
