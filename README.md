@@ -56,3 +56,15 @@
     ├── package-lock.json
     ├── README.md
     └── tsconfig.json
+
+## 🗒️ セットアップ方法
+`FwT`のサイトのセットアップ方法は以下のとおりです。
+### 1. リポジトリをクローン
+指定のディレクトリで、以下のコマンドを実行。
+
+    $ git clone https://github.com/Futurealize-with-Tech/fwt.git
+
+### 2. npmパッケージをインストール
+上記でクローンしたディレクトリに移動し、以下のコマンドを実行。
+
+    $ npm install
