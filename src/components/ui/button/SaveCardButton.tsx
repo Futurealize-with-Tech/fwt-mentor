@@ -5,8 +5,9 @@ import { MdOutlineFileDownload } from 'react-icons/md';
 import styles from './button.module.scss';
 import { useState } from 'react';
 import SaveCardMenu from '../menu/SaveCardMenu';
+import { MessageType } from '@/types/messageType';
 
-export default function SaveCardButton({ id } : { id: number }) {
+export default function SaveCardButton({ message } : { message: MessageType }) {
   const [isHover, setIsHover] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
 
@@ -29,7 +30,7 @@ export default function SaveCardButton({ id } : { id: number }) {
           <MdOutlineFileDownload />
         </div>
         {isMenu && (
-          <SaveCardMenu id={id} onClose={handleMenu} />
+          <SaveCardMenu message={message} onClose={handleMenu} />
         )}
       </motion.div>
     </>
