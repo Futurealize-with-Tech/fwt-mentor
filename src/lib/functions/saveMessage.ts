@@ -15,7 +15,11 @@ export const saveMessage = async ({
   const target = document.getElementById(`${idName}-${messageId}`);
   if (target == null) return;
 
-  html2canvas(target, { scale: 1 }).then((canvas) => {
+  html2canvas(target, {
+    scale: 1,
+    useCORS: true,
+    allowTaint: false,
+  }).then((canvas) => {
     const imgData = document.createElement('a');
     imgData.href = canvas.toDataURL('image/png');
     imgData.download = `${memberName}-${type}.png`;

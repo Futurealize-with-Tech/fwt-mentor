@@ -1,12 +1,7 @@
 import styles from './card.module.scss';
 import { useContext } from 'react';
-import Image from 'next/image';
 import { MessageType } from '@/types/messageType';
 import { CurrentMentorContext } from '@/middleware/CurrentMentorProvider';
-import cardDesign from '@/public/card/card-design.jpg';
-import cardTitle from '@/public/text/card-title.png';
-import messageText from '@/public/text/message-text.png';
-import memberText from '@/public/text/member-text.png';
 import { cardId } from '@/lib/data/cardId';
 
 export default function Card({ message } : { message: MessageType }) {
@@ -18,16 +13,15 @@ export default function Card({ message } : { message: MessageType }) {
         className={styles['card-design-cushion']}
         id={`${cardId}-${message.id}`}
       >
-        <Image
-          src={cardDesign}
+        <img
+          src='/card/card-design.jpg'
           alt='card'
-          width={800}
           className={styles['card-bg-img']}
           style={{ boxShadow: 'none', borderRadius: 0 }}
         />
         <div className={styles['card-front-container']}>
-          <Image
-            src={cardTitle}
+          <img
+            src='/text/card-title.png'
             alt='title'
             width={600}
             className={styles['card-title-img']}
@@ -37,8 +31,8 @@ export default function Card({ message } : { message: MessageType }) {
             <div className={styles['card-mentor-area-decorate']}>殿</div>
           </div>
           <div className={styles['card-message-area']}>
-            <Image
-              src={messageText}
+            <img
+              src='/text/message-text.png'
               alt='message'
               width={80}
               className={styles['card-message-area-title-img']}
@@ -50,8 +44,8 @@ export default function Card({ message } : { message: MessageType }) {
             </p>
           </div>
           <div className={styles['card-member-area']}>
-            <Image
-              src={memberText}
+            <img
+              src='/text/member-text.png'
               alt='message'
               width={80}
               className={styles['card-member-area-title-img']}

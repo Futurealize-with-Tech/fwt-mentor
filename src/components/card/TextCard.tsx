@@ -18,7 +18,9 @@ export default function TextCard({ message } : { message: MessageType }) {
         className={styles['text-card-cushion']}
         id={`${textCardId}-${message.id}`}
       >
-        <Image src={topDecoration} alt='top' className={styles['text-img-top']} width={595} />
+        <img
+          src='/card/decoration/text-card-top.png' alt='top' className={styles['text-img-top']}
+        />
         <div className={styles['text-card-box']}>
           <div className={styles['text-card-text-area']}>
             {currentMentor?.name}
@@ -34,7 +36,9 @@ export default function TextCard({ message } : { message: MessageType }) {
             <div className={styles['text-card-decoration-text']}>より</div>
           </div>
         </div>
-        <Image src={bottomDecoration} alt='bottom' width={595} className={styles['text-img-bottom']} />
+        <img
+          src='/card/decoration/text-card-bottom.png' alt='bottom' className={styles['text-img-bottom']}
+        />
       </div>
     </div>
   );
